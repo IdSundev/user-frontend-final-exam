@@ -4,7 +4,7 @@ import HeaderBottom from '../components/HeaderBottom'
 import HeaderTop from '../components/HeaderTop'
 import axios from 'axios'
 import Cookies from 'universal-cookie'
-import {Redirect} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 const cookies = new Cookies()
 
@@ -64,7 +64,7 @@ export default class Login extends Component {
 
         if (this.state.login === true) {
             return <Redirect to='/' />
-        }
+        } 
 
         return (
             <div>
@@ -97,7 +97,7 @@ export default class Login extends Component {
                                             <input type="text" ref="password" />
                                         </p>
                                         <p id="login-form-remember">
-                                            <label><a href="#">Forget Your Password ? </a></label>
+                                            <label><Link to="/forgetpassword">Forget Your Password ?</Link></label>
                                         </p>
                                         <p>
                                             <input type="button" onClick={() => this.insert(this.refs)} value="Login" />

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-export default class Tes extends Component {
+export default class MyAccount extends Component {
     render() {
         return (
             <div>
-                Hello World
+                <p>Hello World</p>
             </div>
         )
     }
 }
+
