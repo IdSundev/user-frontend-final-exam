@@ -1185,6 +1185,7 @@ h5.sub_title{
 	background:#444;
 }
 
+
 .register {
 	background: #555;
 	color: #FFF;
@@ -1208,6 +1209,28 @@ h5.sub_title{
 }
 
 .reset_password {
+	background: #555;
+	color: #FFF;
+	/* font-size: 0.8em; */
+	padding: 8px 20px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+.editProfile {
 	background: #555;
 	color: #FFF;
 	/* font-size: 0.8em; */
