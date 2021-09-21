@@ -1154,6 +1154,32 @@ h5.sub_title{
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.comments-area input[type="date"] {
+	padding: 10px 15px;
+	width: 97%;
+	color:#000;
+	font-size: 0.8125em;
+	border:1px solid #f0f0f0;
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.comments-area input[type="file"] {
+	padding: 10px 15px;
+	width: 97%;
+	color:#000;
+	font-size: 0.8125em;
+	/* border:1px solid #f0f0f0; */
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 45%;
+}
+
 .comments-area span {
 	color: #A60000;
 }
@@ -3207,4 +3233,15 @@ p.cart a:hover {
 		font-size: 0.85em;
 		margin-bottom: 1%;
 	}
-}								
+}			
+
+.user_img img {
+	width: 100px;
+	height: 100px;
+	margin-left: 50%;
+	display: block;
+	border-radius: 50%;
+	/* -webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	-o-border-radius: 2em; */
+}
