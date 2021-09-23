@@ -10,7 +10,7 @@ import ResetPassword from './pages/ResetPassword'
 import MyAccount from './pages/MyAccount'
 
 // test
-
+// bug
  
 export default class App extends Component {
   render() {
