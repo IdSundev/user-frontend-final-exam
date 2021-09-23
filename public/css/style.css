@@ -1154,6 +1154,32 @@ h5.sub_title{
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.comments-area input[type="date"] {
+	padding: 10px 15px;
+	width: 97%;
+	color:#000;
+	font-size: 0.8125em;
+	border:1px solid #f0f0f0;
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.comments-area input[type="file"] {
+	padding: 10px 15px;
+	width: 97%;
+	color:#000;
+	font-size: 0.8125em;
+	/* border:1px solid #f0f0f0; */
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 45%;
+}
+
 .comments-area span {
 	color: #A60000;
 }
@@ -1184,6 +1210,74 @@ h5.sub_title{
 .comments-area input[type="button"]:hover{
 	background:#444;
 }
+
+
+.register {
+	background: #555;
+	color: #FFF;
+	/* font-size: 0.8em; */
+	padding: 8px 20px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+.reset_password {
+	background: #555;
+	color: #FFF;
+	/* font-size: 0.8em; */
+	padding: 8px 20px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
+.editProfile {
+	background: #555;
+	color: #FFF;
+	/* font-size: 0.8em; */
+	padding: 8px 20px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: left;
+}
+
 p#login-form-remember{
 	float:left;
 }
@@ -1221,6 +1315,24 @@ p#login-form-remember label a:hover{
 .register_account form input[type="text"]:hover, .register_account form select:hover{
 	border:1px solid #DBDADA;
 }
+
+.forget_password{
+	padding:3% 0;
+}
+.forget_password form input[type="text"], .forget_password form select {
+	font-size: 0.8125em;
+	color: #999;
+	padding: 8px;
+	outline: none;
+	margin: 10px 0;
+	width: 35%;
+	font-family: 'Open Sans', sans-serif;
+	border:1px solid #f0f0f0;
+}
+.forget_password form input[type="text"]:hover, .forget_password form select:hover{
+	border:1px solid #DBDADA;
+}
+
 button.grey {
 	background: #555;
 	color: #FFF;
@@ -3121,4 +3233,15 @@ p.cart a:hover {
 		font-size: 0.85em;
 		margin-bottom: 1%;
 	}
-}								
+}			
+
+.user_img img {
+	width: 100px;
+	height: 100px;
+	margin-left: 50%;
+	display: block;
+	border-radius: 50%;
+	/* -webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	-o-border-radius: 2em; */
+}
