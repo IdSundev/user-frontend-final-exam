@@ -8,7 +8,6 @@ export default class ProductCard extends Component {
   }
   render() {
     return (
-      <div>
         <div
           className="col_1_of_3 span_1_of_3"
           style={{ "marginLeft": "10px" }}
@@ -102,7 +101,6 @@ export default class ProductCard extends Component {
           </ul>
           <div className="clear" />
         </div>
-      </div>
     );
   }
 }
