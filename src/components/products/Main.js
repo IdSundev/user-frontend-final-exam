@@ -154,7 +154,7 @@ export default class Main extends Component {
           </div>
           <div className="clear" />
         </div>
-        <div className="box1">
+        <div className="row">
           {this.state.products.map((product, idx) => {
             return (
               <ProductCard
@@ -163,10 +163,11 @@ export default class Main extends Component {
                 name={product.name}
                 price={product.price}
                 picture={product.picture}
+                available={product.available}
+                id_product={product.id_product}
               />
             );
           })}
-          <div className="clear" />
         </div>
         <div className="box1">
           <Pagination links={this.state.links} pageSelected={this.props.page} />

@@ -21,6 +21,7 @@ import DetailTransactionOnDelivery from './pages/DetailTransactionOnDelivery'
 import DetailTransactionCancel from './pages/DetailTransactionCancel'
 import PaymentConfirmation from './pages/PaymentConfirmation'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import DetailProduct from './pages/DetailProduct'
 
 export default class App extends Component {
   render() {
@@ -28,6 +29,7 @@ export default class App extends Component {
       <div>
         <Route exact path="/" component={Homepage}/>
         <Route exact path="/product" component={Productpage}/>
+        <Route exact path="/product/detail/:id" component={DetailProduct}/>
         <Route exact path="/product/:id" component={Productpage}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>

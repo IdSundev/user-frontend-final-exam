@@ -4,19 +4,15 @@ import { Link } from "react-router-dom";
 export default class Pagination extends Component {
   render() {
     return (
-      <div>
+      <div className="mt-4">
         <center>
           <Link to="/product/1">
-            <button
-              className="button1 grey"
-            >
+            <button className="btn btn-dark" style={{ marginRight: "5px" }}>
               &#60;&#60;
             </button>
           </Link>
           <Link to={`/product/${this.props.links.previous}`}>
-            <button
-              className="button1 grey"
-            >
+            <button className="btn btn-dark" style={{ marginRight: "5px" }}>
               &#60;
             </button>
           </Link>
@@ -25,7 +21,8 @@ export default class Pagination extends Component {
               return (
                 <button
                   key={idx}
-                  className="button1 grey"
+                  className="btn btn-dark"
+                  style={{ marginRight: "5px" }}
                   disabled
                 >
                   {page}
@@ -34,7 +31,11 @@ export default class Pagination extends Component {
             }
             if (page === parseInt(this.props.pageSelected)) {
               return (
-                <button key={idx} className="button1 grey">
+                <button
+                  key={idx}
+                  className="btn btn-dark"
+                  style={{ marginRight: "5px" }}
+                >
                   {page}
                 </button>
               );
@@ -42,7 +43,8 @@ export default class Pagination extends Component {
               return (
                 <Link to={`/product/${page}`} key={idx}>
                   <button
-                    className="button1 grey"
+                    className="btn btn-dark"
+                    style={{ marginRight: "5px" }}
                   >
                     {page}
                   </button>
@@ -51,10 +53,15 @@ export default class Pagination extends Component {
             }
           })}
           <Link to={`/product/${this.props.links.next}`}>
-            <button className="button1 grey">&gt;</button>
+            <button
+              className="btn btn-dark mr-2"
+              style={{ marginRight: "5px" }}
+            >
+              &gt;
+            </button>
           </Link>
           <Link to={`/product/${this.props.links.last_page}`}>
-            <button className="button1 grey">&gt;&gt;</button>
+            <button className="btn btn-dark">&gt;&gt;</button>
           </Link>
         </center>
       </div>

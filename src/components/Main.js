@@ -31,7 +31,7 @@ export default class Main extends Component {
   render() {
     if (!this.state.links) return null;
     return (
-        <div className="box1">
+        <div className="row">
           {this.state.products.map((product, idx) => {
             return (
               <ProductCard
@@ -40,10 +40,11 @@ export default class Main extends Component {
                 name={product.name}
                 price={product.price}
                 picture={product.picture}
+                available={product.available}
+                id_product={product.id_product}
               />
             );
           })}
-          <div className="clear" />
         </div>
     );
   }
