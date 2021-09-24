@@ -165,7 +165,7 @@ export default class Test extends Component {
                         <div className="col_1_of_login span_1_of_login">
                             <div className="login-title">
                                 <h4 className="title">Account Information</h4>
-                                <div className="comments-area">
+                                <div className="comments-area payment-confirmation">
                                     <div className="user_img">
                                         <img src={`http://localhost:3001/images/${this.state.user.profile}`} alt="" />
                                         <input type="file" accept="image/*" onChange={this.onFileChange} />
