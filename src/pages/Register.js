@@ -6,6 +6,7 @@ import axios from 'axios'
 import {Redirect} from 'react-router-dom'
 
 
+
 export default class Register extends Component {
 
     constructor() {
@@ -67,9 +68,10 @@ export default class Register extends Component {
                             <p className="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
                             <br/>
                             <br/>
-                            <input type="button" className="register" onClick={() => this.insert(this.refs)} value="Register" />
+                            {/* <input type="button" className="register" onClick={() => this.insert(this.refs)} value="Register" /> */}
                             <div className="clear" />
                         </form>
+                        <input type="button" className="register" onClick={() => this.insert(this.refs)} value="Register" />
                     </div>
                 </div>
                 <Footer />
