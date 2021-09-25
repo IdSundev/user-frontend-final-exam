@@ -22,6 +22,8 @@ import DetailTransactionCancel from './pages/DetailTransactionCancel'
 import PaymentConfirmation from './pages/PaymentConfirmation'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailProduct from './pages/DetailProduct'
+import ListAddress from './pages/ListAddress'
+import AddAddress from './pages/AddAddress'
 
 export default class App extends Component {
   render() {
@@ -31,6 +33,8 @@ export default class App extends Component {
         <Route exact path="/product" component={Productpage}/>
         <Route exact path="/product/detail/:id" component={DetailProduct}/>
         <Route exact path="/product/:id" component={Productpage}/>
+        <Route exact path="/address/add/:id" component={AddAddress}/>
+        <Route exact path="/address/:id" component={ListAddress}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <Route path="/forgetpassword" component={ForgetPassword}/>

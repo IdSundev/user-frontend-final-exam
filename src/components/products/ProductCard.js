@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { url_backend, url_backend_admin } from "../../config/url";
+import { url_backend_admin } from "../../config/url";
 import { Link } from "react-router-dom";
 const currency = require("../../helpers/formatRupiah");
 
