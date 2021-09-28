@@ -8,8 +8,8 @@ import Register from './pages/Register'
 import ForgetPassword from './pages/ForgetPassword'
 import ResetPassword from './pages/ResetPassword'
 import MyAccount from './pages/MyAccount'
+import Productpage from './pages/Productpage'
 import TransactionComplete from './pages/TransactionComplete'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailTransactionComplete from './pages/DetailTransactionComplete'
 import TransactionOnPayment from './pages/TransactionOnPayment'
 import DetailTransactionOnPayment from './pages/DetailTransactionOnPayment'
@@ -22,12 +22,21 @@ import DetailTransactionCancel from './pages/DetailTransactionCancel'
 import PaymentConfirmation from './pages/PaymentConfirmation'
 import ShoppingCart from './pages/ShoppingCart'
 import ChooseAddress from './pages/ChooseAddress'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DetailProduct from './pages/DetailProduct'
+import ListAddress from './pages/ListAddress'
+import AddAddress from './pages/AddAddress'
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <Route exact path="/" component={Homepage}/>
+        <Route exact path="/product" component={Productpage}/>
+        <Route exact path="/product/detail/:id" component={DetailProduct}/>
+        <Route exact path="/product/:id" component={Productpage}/>
+        <Route exact path="/address/add/:id" component={AddAddress}/>
+        <Route exact path="/address/:id" component={ListAddress}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <Route path="/forgetpassword" component={ForgetPassword}/>
