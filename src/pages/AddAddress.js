@@ -231,7 +231,7 @@ class AddAddress extends Component {
       return;
     }
     axios
-      .post(`${url_backend}/address`, {
+      .post(`${url_backend}/addres`, {
         id_user: this.props.match.params.id,
         id_village: this.state.id_village,
         detail_address: this.state.detail_address,
