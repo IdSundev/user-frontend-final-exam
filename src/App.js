@@ -20,6 +20,8 @@ import DetailTransactionOnProcess from './pages/DetailTransactionOnProcess'
 import DetailTransactionOnDelivery from './pages/DetailTransactionOnDelivery'
 import DetailTransactionCancel from './pages/DetailTransactionCancel'
 import PaymentConfirmation from './pages/PaymentConfirmation'
+import ShoppingCart from './pages/ShoppingCart'
+import ChooseAddress from './pages/ChooseAddress'
 
 export default class App extends Component {
   render() {
@@ -42,6 +44,8 @@ export default class App extends Component {
         <Route path="/detail-transaction-on-delivery/:idUser/:idTransaction" component={DetailTransactionOnDelivery}/>
         <Route path="/detail-transaction-cancel/:idUser/:idTransaction" component={DetailTransactionCancel}/>
         <Route path="/payment-confirmation" component={PaymentConfirmation}/>
+        <Route path="/shopping-cart" component={ShoppingCart}/>
+        <Route path="/address" component={ChooseAddress}/>
       </div>
     )
   }

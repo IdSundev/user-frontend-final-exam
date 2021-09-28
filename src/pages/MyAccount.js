@@ -25,9 +25,9 @@ export default class Test extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.selectedFile !== prevState.selectedFile) {
-            console.log('AYO', this.state.selectedFile)
+           console.log('AYO', this.state.selectedFile)
         }
-    }
+    } 
 
     componentWillMount() {
 
