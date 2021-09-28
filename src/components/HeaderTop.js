@@ -11,7 +11,7 @@ export default class HeaderTop extends Component {
                     </div>
                     <div className="cssmenu">
                         <ul>
-                            <li className="active"><a href="register.html">Sign up &amp; Save</a></li>
+                            <li className="active"><Link to="/register">Sign up &amp; Save</Link></li>
                             <li><a href="shop.html">Store Locator</a></li>
                             <li><Link to="/login">My Account</Link></li>
                             <li><a href="checkout.html">CheckOut</a></li>
