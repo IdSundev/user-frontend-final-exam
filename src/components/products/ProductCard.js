@@ -25,10 +25,9 @@ export default class ProductCard extends Component {
               <br />
               Rp. {currency.FormatRupiah(this.props.price)}
             </p>
-            <a className="btn btn-dark" style={{"marginRight":"5px"}}>Add to Cart</a>
+            <a className="btn btn-dark" style={{"marginRight":"5px", "color":"white"}}>Add to Cart</a>
             <Link
               to={`/product/detail/${this.props.id_product}`}
-              className="color1"
             >
               <a className="btn btn-warning">Detail</a>
             </Link>

@@ -223,7 +223,7 @@ export default class Test extends Component {
                   </form>
                   <label>Address</label>
                   <br />
-                  <Link to={`/address/${this.state.user.id_user}`}>
+                  <Link to={`/listaddress/${this.state.user.id_user}`}>
                     <button
                       className="btn btn-dark mr-2"
                       style={{ marginRight: "5px" }}

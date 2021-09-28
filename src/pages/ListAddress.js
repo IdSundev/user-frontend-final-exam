@@ -60,7 +60,7 @@ class ListAddress extends Component {
         >
           <div className="row">
             <div className="col-md-12">
-              <Link to={`/address/add/${this.props.match.params.id}`}>
+              <Link to={`/addaddress/add/${this.props.match.params.id}`}>
                 <button className="btn btn-dark mr-2">
                   Create New Address
                 </button>
