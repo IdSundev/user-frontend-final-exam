@@ -1,12 +1,52 @@
 import React, { Component } from "react";
 import { url_backend_admin } from "../../config/url";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import Cookies from "universal-cookie";
 const currency = require("../../helpers/formatRupiah");
+const cookies = new Cookies();
+
 
 export default class ProductCard extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      login: false
+    };
+
   }
+
+  insert(index) {
+
+
+    let jwtToken = cookies.get('jwtToken');
+
+    if (jwtToken !== undefined) {
+        this.setState({
+            login: true
+        })
+    }
+
+    let formData = {
+      id_product: index,
+      token: jwtToken
+    }
+
+    console.log(formData)
+
+    axios.post('http://localhost:3001/add-product-to-cart', formData, {
+    }).then(function (response) {
+      console.log(response.data);
+      alert('success')
+
+    }).catch(function (err) {
+      // console.log(err);
+      alert('Please Login First')
+    });
+
+  }
+
   render() {
     return (
       <div className="col-md-3">
@@ -25,7 +65,7 @@ export default class ProductCard extends Component {
               <br />
               Rp. {currency.FormatRupiah(this.props.price)}
             </p>
-            <a className="btn btn-dark" style={{"marginRight":"5px", "color":"white"}}>Add to Cart</a>
+            <a className="btn btn-dark" style={{ "marginRight": "5px", "color":"white" }} onClick={() => this.insert(this.props.id_product)} >Add to Cart</a>
             <Link
               to={`/product/detail/${this.props.id_product}`}
             >

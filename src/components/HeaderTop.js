@@ -13,8 +13,9 @@ export default class HeaderTop extends Component {
                         <ul>
                             <li className="active"><Link to="/register">Sign up &amp; Save</Link></li>
                             <li><a href="shop.html">Store Locator</a></li>
-                            <li><Link to="/login">My Account</Link></li>
-                            <li><a href="checkout.html">CheckOut</a></li>
+                            <li><Link to="/login">Login</Link></li>
+                            <li><Link to="/accountinformation">My Account</Link></li>
+                            <li><Link to="/shopping-cart">CheckOut</Link></li>
                         </ul>
                     </div>
                     <ul className="icon2 sub-icon2 profile_img">
