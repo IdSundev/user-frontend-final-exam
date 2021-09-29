@@ -111,7 +111,7 @@ export default class Detail extends Component {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur.<br />
-              <a className="btn btn-dark" style={{ marginRight: "5px", marginTop: "10px" }} onClick={() => this.insert(this.props.id_product)}>
+              <a className="btn btn-dark" style={{ marginRight: "5px", marginTop: "10px", color:"white" }} onClick={() => this.insert(this.props.id_product)}>
                 Add to Cart
               </a>
             </p>
