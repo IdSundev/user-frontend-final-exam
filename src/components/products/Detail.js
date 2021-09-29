@@ -4,6 +4,8 @@ import { url_backend, url_backend_admin } from "../../config/url";
 import HeaderTop from "../HeaderTop";
 import HeaderBottom from "../HeaderBottom";
 import Footer from "../Footer";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
 export default class Detail extends Component {
   componentDidMount() {
@@ -19,8 +21,39 @@ export default class Detail extends Component {
       picture: "",
       category: "",
       available: "",
+      login: false
     };
     this.getProduct = this.getProduct.bind(this);
+  }
+
+  insert(index) {
+
+
+    let jwtToken = cookies.get('jwtToken');
+
+    if (jwtToken !== undefined) {
+        this.setState({
+            login: true
+        })
+    }
+
+    let formData = {
+      id_product: index,
+      token: jwtToken
+    }
+
+    console.log(formData)
+
+    axios.post('http://localhost:3001/add-product-to-cart', formData, {
+    }).then(function (response) {
+      console.log(response.data);
+      alert('success')
+
+    }).catch(function (err) {
+      // console.log(err);
+      alert('Please Login First')
+    });
+
   }
 
   getProduct = () => {
@@ -78,7 +111,7 @@ export default class Detail extends Component {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur.<br />
-              <a className="btn btn-dark" style={{ marginRight: "5px", marginTop: "10px" }}>
+              <a className="btn btn-dark" style={{ marginRight: "5px", marginTop: "10px", color:"white" }} onClick={() => this.insert(this.props.id_product)}>
                 Add to Cart
               </a>
             </p>
