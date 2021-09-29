@@ -19,11 +19,11 @@ class Homepage extends Component {
               >
                 <div className="banner-wrap">
                   <div className="slider-left">
-                    <img src="images/banner1.jpg" alt="" />
+                    <img src="images/SamsungBanner2.png" alt="" />
                   </div>
                   <div className="slider-right">
-                    <h1>Classic</h1>
-                    <h2>White</h2>
+                    <h1>Galaxy Z</h1>
+                    <h2>Fold 3</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                     <div className="btn">
                       <a href="shop.html">Shop Now</a>
