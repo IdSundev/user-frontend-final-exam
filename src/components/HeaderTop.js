@@ -7,7 +7,7 @@ export default class HeaderTop extends Component {
             <div className="header-top">
                 <div className="wrap">
                     <div className="logo">
-                        <Link to="/"><img src="images/logo.png" alt="" /></Link>
+                        <Link to="/"><img src="images/logo2.jpg" alt="" /></Link>
                     </div>
                     <div className="cssmenu">
                         <ul>
