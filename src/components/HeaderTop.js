@@ -7,12 +7,12 @@ export default class HeaderTop extends Component {
             <div className="header-top">
                 <div className="wrap">
                     <div className="logo">
-                        <Link to="/"><img src="images/logo.png" alt="" /></Link>
+                        <Link to="/"><img src="images/Logo_Samsung.png" alt="" /></Link>
                     </div>
                     <div className="cssmenu">
                         <ul>
                             <li className="active"><Link to="/register">Sign up &amp; Save</Link></li>
-                            <li><a href="shop.html">Store Locator</a></li>
+                            <li><Link to="/transaction-complete">My Transactions</Link></li>
                             <li><Link to="/login">Login</Link></li>
                             <li><Link to="/accountinformation">My Account</Link></li>
                             <li><Link to="/shopping-cart">CheckOut</Link></li>

@@ -211,7 +211,7 @@ export default class ChooseAddress extends Component {
         axios.post('http://localhost:3001/create-transaction', formData, {
         }).then(function (response) {
             console.log('response-data', response.data.result.insertId);
-            alert('success')
+            alert(`ID Transaksi Anda adalah ${response.data.result.insertId}`)
 
             let transactionUser = {
                 id_transaction: response.data.result.insertId,
@@ -241,7 +241,7 @@ export default class ChooseAddress extends Component {
             axios.post('http://localhost:3001/create-transaction-detail', formData, {
             }).then(function (response) {
                 console.log('response-data', response.data);
-                alert('success')
+                // alert('success')
             }).catch(function (err) {
                 console.log(err);
             });
@@ -263,7 +263,7 @@ export default class ChooseAddress extends Component {
         axios.post('http://localhost:3001/delete-cart', formData, {
         }).then(function (response) {
             console.log('response-data', response.data);
-            alert('success')
+            // alert('success')
         }).catch(function (err) {
             console.log(err);
         });

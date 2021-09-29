@@ -18,6 +18,11 @@ export default class HeaderBottom extends Component {
                 Product
               </Link>
             </li>
+            <li>
+            <Link to={`/payment-confirmation`} className="color2">
+                Payment Confirmation
+              </Link>
+            </li>
           </ul>
           <div className="clear" />
         </div>

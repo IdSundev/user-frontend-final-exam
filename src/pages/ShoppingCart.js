@@ -131,7 +131,7 @@ export default class ShoppingCart extends Component {
         axios.post('http://localhost:3001/update-cart', formData, {
         }).then(function (response) {
             console.log('response-data', response.data);
-            alert('success')
+            alert(`success`)
         }).catch(function (err) {
             console.log(err);
         });
