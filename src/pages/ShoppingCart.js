@@ -57,32 +57,32 @@ export default class ShoppingCart extends Component {
             })
     }
 
-    // getCart(){
-    //     let jwtToken = cookies.get('jwtToken');
+    getCart(){
+        let jwtToken = cookies.get('jwtToken');
 
-    //     if (jwtToken !== undefined) {
-    //         this.setState({
-    //             login: true
-    //         })
-    //     }
+        if (jwtToken !== undefined) {
+            this.setState({
+                login: true
+            })
+        }
 
-    //     let formData = {
-    //         token: jwtToken
-    //     }
+        let formData = {
+            token: jwtToken
+        }
         
-    //     var self = this
+        var self = this
 
-    //     axios.post(`http://localhost:3001/shopping-cart`, formData, {
-    //     })
-    //         .then((response) => {
-    //             this.setState({
-    //                 paymentSummary: response.data.data
-    //             })
-    //             console.log(response)
-    //             console.log('ini', this.state.cart)
-    //             self.getTotalPayment(this.state.cart)
-    //         })
-    // }
+        axios.post(`http://localhost:3001/shopping-cart`, formData, {
+        })
+            .then((response) => {
+                this.setState({
+                    paymentSummary: response.data.data
+                })
+                console.log(response)
+                console.log('ini', this.state.cart)
+                self.getTotalPayment(this.state.cart)
+            })
+    }
 
     getTotalPayment(cart){
         cart.forEach(el=>{
@@ -141,6 +141,27 @@ export default class ShoppingCart extends Component {
         // self.getCart()
     }
 
+    remove(index) {
+
+        var self = this;
+
+        let formData = {
+            id_cart_detail: this.state.paymentSummary[index].id_cart_detail
+        }
+        
+        console.log(formData)
+
+        axios.post('http://localhost:3001/delete-product-from-cart', formData, {
+        }).then(function (response) {
+            console.log('response-data', response.data);
+            alert('success')
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+        // self.getCart()
+    }
+
 
 
     render() {
@@ -173,7 +194,7 @@ export default class ShoppingCart extends Component {
                 </td>
                 <td class="text-right">
                     <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light mr-2" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                    <a href="" class="btn btn-light"> Remove</a>
+                    <a  class="btn btn-light" onClick={() => this.remove(index)}> Remove</a>
                 </td>
             </tr>
     
